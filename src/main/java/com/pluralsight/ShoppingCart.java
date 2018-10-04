@@ -42,6 +42,15 @@ public class ShoppingCart {
  public void setOrderTotal(double dblOrderTotal) {
   this.dblOrderTotal = dblOrderTotal;
  }
+ 
+ public void deleteCartItem(int index) {
+	 try {
+		 cartItems.remove(index);
+	 }catch(IndexOutOfBoundsException e) {
+		 e.printStackTrace();
+	 }
+	 
+ }
 
  protected void calculateOrderTotal() {
   double dblTotal = 0;
